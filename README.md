@@ -1,16 +1,47 @@
 # About
+* This repository is development phase of [ChargeBackApp](https://github.com/technqvi/ChargeBackApp)
 * The Chargeback System is able to retrieve the following private cloud 's resources usage  to calculate monthly expense. 
   - VM Usage(CPU,Memory,Disk Capacity, OS and Database)
   - Storage(Volume Usage Size) such as NetApp,HPE Storage(Nimble and Primera  and StoreOnce)
 * It will charge each CostCenter(1 CostCenter is representative of  Business Unit) for IT-Infrastructure resources usage.
 * System will generate monthly billing report as pdf file and send it to each the cost center via email.
 
-This repository is development phase of [ChargeBackApp](https://github.com/technqvi/ChargeBackApp)
 
-## ETL Data 
-We schedule job to run script in order to load data from VMWare(RVTool),NetApp(NetAppDoc3.6),HPE-Storeage(HPETookkit),StoreOnce(StoreOnce-API) and save them as csv/excel file to get data ready for ETL process.
+## VM-ChargeBack Process Flow
+![chargeback_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/1757c3ef-2039-494c-9f5d-e7c8ccd51d99)
+#### 1.Import data
+The system will get Cloud-Infrastructure resources usage such as VM-Instances,NetApp-Storage,HPE-Storage and StoreOnce  and import usage data to the specific local path as csv file / excel file.
+#### 2.ETL Data 
+Extract, transform and load(ETL) data from csv or excel files to postgresql database. the follwing steps are some of the ETL processing
+- removing duplicate row and null values.
+- filtering by specific connction.
+- adding new columns.
 
+#### 3.Calculate Monthly Cost
+There are 3 cost calculation categories as below.
+1. Master Cost: 
+   - VM Cost:  CPUs,Memory,Disk Size
+   - Storage Cost(NetApp,HP Storage): Storage Size
+2. Database & OS Cost: Instances/Server Base , No.License Base and Core-CPU to Instance Base.
+3. Operation & Maintenance Cost: Antivirus Software,IT-Operation Service,Performance Monitoring Alert,Backup Software(Depending on Disk Backup Size) and System Monitoring Service 
 
+#### 4.Build Report 
+- Use cost calculation from the previous step to summarize expenses by cost center.
+- Generate Microsoft Excel and pdf reports and collect these files as a zip file and attach a ZIP File to an Email and send it out. 
+
+#### 5.Check valid data (Addtional Module)
+Check  data from VM,Storage Server and check data is ready and valid to save into database. if any error, the system will email to admin. This step is used for getting data ready to perform ETL data step.
+
+## StoreOnce ChargeBack Process 
+Mainly , program is similar to VM-ChargeBack System except ETL step that it can pull data data from StoreOnce server to database through StoreOnce-API directly without file like CSV/Excel .  
+![storeonce_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/d2f7e0fa-3512-4d5b-8cd1-62e8449cf8b7)
+## Web Administrator
+<img width="945" alt="Chargeback-App-Web-Admin" src="https://github.com/technqvi/ChargebackReportDev/assets/38780060/ddd37cb9-dce4-4d16-b94d-662bcca25138">
+
+### PDF-Report as output
+![chrageback_ReportSample](https://github.com/technqvi/ChargebackReportDev/assets/38780060/ecccd741-6ac8-41b4-9b8a-fdac6582879c)
+
+## Source Code
 
 ### [etl_vm_data.ipynb](https://github.com/technqvi/ChargebackReport/blob/master/etl_vm_data.ipynb)
 * Load VM-Instances usage data from csv file in order to perform data cleansing and transformation and  save data into database.
