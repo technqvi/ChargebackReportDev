@@ -39,7 +39,7 @@ Mainly , program is similar to VM-ChargeBack System except ETL step that it can 
 <img width="945" alt="Chargeback-App-Web-Admin" src="https://github.com/technqvi/ChargebackReportDev/assets/38780060/ddd37cb9-dce4-4d16-b94d-662bcca25138">
 
 ### PDF-Report as output
-![chrageback_ReportSample](https://github.com/technqvi/ChargebackReportDev/assets/38780060/ecccd741-6ac8-41b4-9b8a-fdac6582879c)
+![258594409-ecccd741-6ac8-41b4-9b8a-fdac6582879c](https://github.com/technqvi/ChargebackReportDev/assets/38780060/3570c753-0c74-4c04-aa86-a551152a2ac6)
 
 #  SourceCode
 ## ETL Data To Database
