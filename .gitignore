@@ -9,6 +9,8 @@
 *.zip
 *.lnk
 
+*.py
+*.ipybn
 
 .idea
 .ipynb_checkpoints
