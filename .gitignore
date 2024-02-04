@@ -10,7 +10,7 @@
 *.lnk
 
 *.py
-*.ipybn
+*.ipynb
 
 .idea
 .ipynb_checkpoints
