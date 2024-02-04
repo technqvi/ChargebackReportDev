@@ -34,7 +34,7 @@ Check  data from VM,Storage Server and check data is ready and valid to save int
 
 ## StoreOnce ChargeBack Process 
 Mainly , program is similar to VM-ChargeBack System except ETL step that it can pull data data from StoreOnce server to database through StoreOnce-API directly without file like CSV/Excel .  
-![storeonce_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/d2f7e0fa-3512-4d5b-8cd1-62e8449cf8b7)
+![22222](https://github.com/technqvi/ChargebackReportDev/assets/38780060/a8a0acd8-b694-4260-8532-214ba2a41aaa)
 ## Web Administrator
 <img width="945" alt="Chargeback-App-Web-Admin" src="https://github.com/technqvi/ChargebackReportDev/assets/38780060/ddd37cb9-dce4-4d16-b94d-662bcca25138">
 
