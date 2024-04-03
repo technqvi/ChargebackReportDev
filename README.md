@@ -5,9 +5,17 @@
   - Storage(Volume Usage Size) such as NetApp,HPE Storage(Nimble and Primera  and StoreOnce)
 * It will charge each CostCenter(1 CostCenter is representative of  Business Unit) for IT-Infrastructure resources usage.
 * System will generate monthly billing report as pdf file and send it to each the cost center via email.
+## VM-ChargeBack Prcess Oveview
+
+* Data Processing: This initial stage involves collecting and transforming data from various sources and formats, ensuring it's properly cleansed and structured for the next task
+* Cost Calculation: This is the core of the project by calculating different types of costs - hardware, software, and IT support. This step is crucial for accurately distributing IT Usage Expenses across different departments or cost centers based on their usage.
+* Report Generation and Data Aggregation: report generation and data aggregation 
+  * Excel or CSV File: This file serves as an intermediate step, aggregating cost data from various sources. It's used for internal purposes, likely serving as a basis for further analysis or as an input for the final reporting stage.
+  * PDF File: The core output of your process, this document is the formal chargeback report delivered to customers, detailing their IT infrastructure usage and associated costs. The PDF format ensures the report is easily shareable and maintains its integrity when viewed across different devices and platforms.
 
 
-## VM-ChargeBack Process Flow
+
+## VM-ChargeBack Architecture
 ![chargeback_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/1757c3ef-2039-494c-9f5d-e7c8ccd51d99)
 #### 1.Import data
 The system will get Cloud-Infrastructure resources usage such as VM-Instances,NetApp-Storage,HPE-Storage and StoreOnce  and import usage data to the specific local path as csv file / excel file.
@@ -25,7 +33,7 @@ There are 3 cost calculation categories as below.
 2. Database & OS Cost: Instances/Server Base , No.License Base and Core-CPU to Instance Base.
 3. Operation & Maintenance Cost: Antivirus Software,IT-Operation Service,Performance Monitoring Alert,Backup Software(Depending on Disk Backup Size) and System Monitoring Service 
 
-#### 4.Build Report 
+#### 4.Build Analystics File and Billing Report 
 - Use cost calculation from the previous step to summarize expenses by cost center.
 - Generate Microsoft Excel and pdf reports and collect these files as a zip file and attach a ZIP File to an Email and send it out. 
 
