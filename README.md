@@ -5,7 +5,7 @@
   - Storage(Volume Usage Size) such as NetApp,HPE Storage(Nimble and Primera  and StoreOnce)
 * It will charge each CostCenter(1 CostCenter is representative of  Business Unit) for IT-Infrastructure resources usage.
 * System will generate monthly billing report as pdf file and send it to each the cost center via email.
-## VM-ChargeBack Prcess
+## VM-ChargeBack Process
 
 * Data Processing: This initial stage involves collecting and transforming data from various sources and formats, ensuring it's properly cleansed and structured for the next task
 * Cost Calculation: This is the core of the project by calculating different types of costs - hardware, software, and IT support. This step is crucial for accurately distributing IT Usage Expenses across different departments or cost centers based on their usage.
