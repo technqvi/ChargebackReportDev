@@ -18,7 +18,8 @@
 ## VM-ChargeBack Architecture on Prems
 ![chargeback_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/1757c3ef-2039-494c-9f5d-e7c8ccd51d99)
 ## VM-ChargeBack Architecture  On Cloud 
-<img width="1132" alt="image" src="https://github.com/user-attachments/assets/ae6c3bb3-a369-4787-8232-ca055c6dc232">
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/b7a2876f-27bf-4ba7-8286-c278ea2d394b">
+
 
 #### 1.Import data
 The system will get Cloud-Infrastructure resources usage such as VM-Instances,NetApp-Storage,HPE-Storage and StoreOnce  and import usage data to the specific local path as csv file / excel file.
