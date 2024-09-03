@@ -17,6 +17,9 @@
 
 ## VM-ChargeBack Architecture 
 ![chargeback_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/1757c3ef-2039-494c-9f5d-e7c8ccd51d99)
+## VM-ChargeBack On Cloud
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/ae6c3bb3-a369-4787-8232-ca055c6dc232">
+
 #### 1.Import data
 The system will get Cloud-Infrastructure resources usage such as VM-Instances,NetApp-Storage,HPE-Storage and StoreOnce  and import usage data to the specific local path as csv file / excel file.
 #### 2.ETL Data 
@@ -43,6 +46,7 @@ Check  data from VM,Storage Server and check data is ready and valid to save int
 ## StoreOnce ChargeBack Process 
 Mainly , program is similar to VM-ChargeBack System except ETL step that it can pull data data from StoreOnce server to database through StoreOnce-API directly without file like CSV/Excel .  
 ![22222](https://github.com/technqvi/ChargebackReportDev/assets/38780060/a8a0acd8-b694-4260-8532-214ba2a41aaa)
+
 ## Web Administrator
 <img width="945" alt="Chargeback-App-Web-Admin" src="https://github.com/technqvi/ChargebackReportDev/assets/38780060/ddd37cb9-dce4-4d16-b94d-662bcca25138">
 
