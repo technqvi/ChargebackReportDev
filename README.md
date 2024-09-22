@@ -18,7 +18,7 @@
 ## VM-ChargeBack Architecture on Prems
 ![chargeback_overview](https://github.com/technqvi/ChargebackReportDev/assets/38780060/1757c3ef-2039-494c-9f5d-e7c8ccd51d99)
 ## VM-ChargeBack Architecture  On Cloud 
-<img width="1132" alt="image" src="https://github.com/user-attachments/assets/d3920869-3002-4de8-9afa-f4c005925308">
+<img width="1132" alt="image" src="https://github.com/user-attachments/assets/e4f9ad56-b608-4a4f-b768-82162c87260b">
 
 
 
